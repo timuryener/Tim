@@ -2,8 +2,7 @@ import { useState } from 'react';
 import {
   ChartBarIcon,
   DocumentArrowDownIcon,
-  CalendarIcon,
-  FunnelIcon
+  CalendarIcon
 } from '@heroicons/react/24/outline';
 
 const reportTypes = [

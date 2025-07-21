@@ -3,7 +3,6 @@ import { Routes, Route, Link } from 'react-router-dom';
 import {
   PlusIcon,
   EyeIcon,
-  CheckCircleIcon,
   TruckIcon
 } from '@heroicons/react/24/outline';
 
@@ -36,7 +35,7 @@ const mockOrders = [
 ];
 
 function PurchaseOrdersList() {
-  const [orders, setOrders] = useState(mockOrders);
+  const [orders] = useState(mockOrders);
 
   const getStatusColor = (status: string) => {
     switch (status) {

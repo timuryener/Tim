@@ -1,0 +1,48 @@
+ERP SİSTEMİ - HTML KURULUM REHBERİ
+=====================================
+
+Bu dosyalar ERP Sistemi'nin statik HTML/CSS/JavaScript versiyonunu içerir.
+
+KURULUM ADAMLARI:
+1. Bu dosyaları bir web sunucusuna yükleyin
+2. index.html dosyasını tarayıcınızda açın
+
+WEB SUNUCUSU İLE ÇALIŞTIRMA:
+---------------------------
+Eğer bilgisayarınızda Python yüklüyse:
+
+1. Terminal/Command Prompt'u açın
+2. Bu klasöre gidin
+3. Aşağıdaki komutlardan birini çalıştırın:
+
+Python 3:
+  python -m http.server 8000
+
+Python 2:
+  python -m SimpleHTTPServer 8000
+
+4. Tarayıcınızda http://localhost:8000 adresini açın
+
+Node.js ile:
+  npx serve . -p 8000
+
+GİRİŞ BİLGİLERİ:
+----------------
+E-posta: ahmet@company.com
+Şifre: 123456
+
+NOT:
+----
+- Bu statik bir versiyondur, veriler tarayıcı belleğinde saklanır
+- Sayfa yenilendiğinde değişiklikler kaybolur
+- Gerçek kullanım için backend entegrasyonu gereklidir
+
+DOSYA YAPISI:
+-------------
+- index.html: Ana HTML dosyası
+- assets/index-*.css: Stil dosyası
+- assets/index-*.js: JavaScript dosyası
+
+DESTEK:
+-------
+GitHub: https://github.com/[repository-link]

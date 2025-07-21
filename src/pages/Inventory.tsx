@@ -72,7 +72,7 @@ const mockInventory = [
 ];
 
 function InventoryList() {
-  const [inventory, setInventory] = useState(mockInventory);
+  const [inventory] = useState(mockInventory);
   const [filter, setFilter] = useState('all');
   const [categoryFilter, setCategoryFilter] = useState('all');
 

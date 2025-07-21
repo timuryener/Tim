@@ -3,7 +3,6 @@ import { Routes, Route, Link, useNavigate } from 'react-router-dom';
 import {
   PlusIcon,
   EyeIcon,
-  PencilIcon,
   CheckIcon,
   XMarkIcon,
   FunnelIcon
@@ -89,17 +88,17 @@ function MaterialRequestsList() {
   const handleApprove = (id: string) => {
     setRequests(requests.map(req => 
       req.id === id 
-        ? { ...req, status: 'approved', approvedBy: 'Ahmet Yılmaz', approvedDate: new Date().toISOString().split('T')[0] }
+        ? { ...req, status: 'approved' as const, approvedBy: 'Ahmet Yılmaz', approvedDate: new Date().toISOString().split('T')[0] }
         : req
-    ));
+    ) as any);
   };
 
   const handleReject = (id: string) => {
     setRequests(requests.map(req => 
       req.id === id 
-        ? { ...req, status: 'rejected', approvedBy: 'Ahmet Yılmaz', approvedDate: new Date().toISOString().split('T')[0] }
+        ? { ...req, status: 'rejected' as const, approvedBy: 'Ahmet Yılmaz', approvedDate: new Date().toISOString().split('T')[0] }
         : req
-    ));
+    ) as any);
   };
 
   return (
@@ -228,13 +227,7 @@ function NewMaterialRequest() {
     items: [{ materialId: '', quantity: 1, notes: '' }],
     notes: ''
   });
-  const [showMaterialSearch, setShowMaterialSearch] = useState(false);
-  const [searchTerm, setSearchTerm] = useState('');
   const navigate = useNavigate();
-
-  const filteredMaterials = mockMaterials.filter(material =>
-    material.name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
 
   const addItem = () => {
     setFormData({

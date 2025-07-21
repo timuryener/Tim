@@ -3,9 +3,7 @@ import { Routes, Route, Link } from 'react-router-dom';
 import {
   PlusIcon,
   EyeIcon,
-  StarIcon,
-  CheckBadgeIcon,
-  XCircleIcon
+  StarIcon
 } from '@heroicons/react/24/outline';
 
 const mockSuppliers = [
@@ -45,7 +43,7 @@ const mockSuppliers = [
 ];
 
 function SuppliersList() {
-  const [suppliers, setSuppliers] = useState(mockSuppliers);
+  const [suppliers] = useState(mockSuppliers);
   const [filter, setFilter] = useState('all');
 
   const filteredSuppliers = suppliers.filter(supplier => 

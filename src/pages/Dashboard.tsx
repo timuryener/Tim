@@ -4,7 +4,6 @@ import {
   TruckIcon,
   ShoppingCartIcon,
   ExclamationTriangleIcon,
-  CheckCircleIcon,
   ClockIcon,
   BuildingStorefrontIcon,
   ArchiveBoxIcon
